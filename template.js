@@ -50,12 +50,12 @@ document.querySelector(".posts").innerHTML=temp;
 document.getElementById("btn2").addEventListener("click",function(){
   httpget("https://jsonplaceholder.typicode.com/users",(r2)=>{
     console.log(r2)
-    var temp =``
-    r.forEach((value)=>{
+    var temp1 =``
+    r2.forEach((value)=>{
         temp+=`<div class="col-4"><div class="card shadow">
         <img src="" class="card-img-top" alt="...">
         <div class="card-body">
-            <h4 class="card-title">${value.name}</h4>
+            <h4 class="card-title">${value.username}</h4>
             <p class="card-text">${value.email}</p>
         </div>
         <div class="card-body card-p">
@@ -74,7 +74,7 @@ document.getElementById("btn2").addEventListener("click",function(){
     </div></div>`
     })
 
-document.querySelector(".newpost").innerHTML=temp;
+document.querySelector(".newpost").innerHTML=temp1;
 
 
 
